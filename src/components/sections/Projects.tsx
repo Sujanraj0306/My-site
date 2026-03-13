@@ -5,33 +5,32 @@ const projects = [
           title: "Sentinel-X: Adversarial Legal Intelligence Core",
           date: "Jan 2026",
           tech: ["MCP", "RAG", "Multi-Agent AI", "FastAPI"],
-          desc: "Architected a local-first ecosystem using MCP-based architectures to facilitate seamless data tool integration between specialized AI agents (Gemini, DeepSeek). Engineered a Multi-Agent Collaborative Debate (MAD) protocol to ensure high data accuracy and reliability.",
-          link: "https://drive.google.com/file/d/1-oj5CYw_SifR2Q8Y2dhLxWCob4pT8p6w/view?usp=sharing",
-          linkText: "Project PPT"
-     },
-     {
-          title: "The LLM Search",
-          date: "Aug 2025",
-          tech: ["RAG Pipeline", "ChromaDB", "Web Scraping", "React.js"],
-          desc: "Orchestrated a RAG pipeline utilizing 384-dimensional embeddings to perform automated data extraction and transformations. Implemented efficient vector database (ChromaDB) integrations.",
-          link: "https://github.com/Sujanraj0306/The_LLM_Search",
-          linkText: "Git Repo"
+          desc: "Boosted legal research productivity by 80% through the development of a local-first ecosystem utilizing MCP-based architectures for seamless data tool orchestration. Ensured 100% data privacy and reasoning reliability by engineering a Multi-Agent Collaborative Debate (MAD) protocol for high-stakes ADK deployments.",
+          repo: "https://github.com/Sujanraj0306/Sentinal-X.git",
+          demo: "https://drive.google.com/file/d/1QVHMInT_aBPHkqcgw7VfBzrinSbdgtRE/view?usp=sharing"
      },
      {
           title: "AI Powered RE-Dact Systems",
           date: "Sep 2025",
           tech: ["NLP", "Steganography", "Cryptography"],
-          desc: "Engineered an enterprise-grade PII redaction toolkit achieving 94% accuracy, focusing on data quality and platform security.",
-          link: "https://github.com/Sujanraj0306/Redact_Systems",
-          linkText: "Git Repo"
+          desc: "Mitigated legal risk for client-focused initiatives by engineering an enterprise-grade PII redaction toolkit that achieved 94% accuracy in sensitive data masking. Enhanced organizational accessibility by implementing reversible Steganography, allowing for the 100% reliable recovery of encrypted information during audits.",
+          repo: "https://github.com/Sujanraj0306/Redact_Systems",
+          demo: "https://drive.google.com/file/d/1JhgKCBJ5aVPmZ2JA2PfgSEnY18qIh9ZA/view"
+     },
+     {
+          title: "The LLM Search",
+          date: "Aug 2025",
+          tech: ["RAG Pipeline", "ChromaDB", "Ollama", "React.js"],
+          desc: "Generated strategic business value from unstructured web data by orchestrating a RAG pipeline utilizing high-density 384-dimensional embeddings. Reduced operational overhead for consultative interfaces by integrating cost-effective Ollama models to deliver real-time, LLM-driven market insights.",
+          repo: "https://github.com/Sujanraj0306/The_LLM_Search",
+          demo: "https://drive.google.com/file/d/1VKimSYVvtw_rdlJfi6xOjZglp5qXgjhh/view"
      },
      {
           title: "GenStyle AI",
           date: "Oct 2025",
-          tech: ["GenAI", "AWS", "Augmented Reality", "API Integration"],
-          desc: "Architected a scalable platform using Gemini API for personalized recommendations, leveraging data analytics to boost user engagement by 40%.",
-          link: "https://drive.google.com/file/d/148CPK_c2p-PU37a0j359Eam5S99cwuaP/view",
-          linkText: "Demo Video"
+          tech: ["Gemini API", "AWS", "Augmented Reality"],
+          desc: "Increased user retention by 40% by architecting a scalable GenAI platform that delivered personalized consumer experiences through real-time AR styling.",
+          demo: "https://drive.google.com/file/d/148CPK_c2p-PU37a0j359Eam5S99cwuaP/view"
      }
 ];
 
@@ -56,9 +55,18 @@ export function Projects() {
                               <p className="text-mono-400 text-sm leading-relaxed mb-8 flex-grow font-light group-hover:text-mono-300 transition-colors">
                                    {p.desc}
                               </p>
-                              <a href={p.link} target="_blank" rel="noopener noreferrer" className="inline-block mt-auto text-xs font-mono text-mono-300 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
-                                   {p.linkText} <span className="text-[10px]">↗</span>
-                              </a>
+                              <div className="flex gap-4 mt-auto">
+                                   {p.repo && (
+                                        <a href={p.repo} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-mono-300 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                                             Repo <span className="text-[10px]">↗</span>
+                                        </a>
+                                   )}
+                                   {p.demo && (
+                                        <a href={p.demo} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-mono-300 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                                             Demo <span className="text-[10px]">↗</span>
+                                        </a>
+                                   )}
+                              </div>
                          </GlassCard>
                     ))}
                </div>
